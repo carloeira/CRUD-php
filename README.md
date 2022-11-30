@@ -1,6 +1,9 @@
 #CRUD DE ESCOLAS
 
-Aplicação web do tipo monolitica criada com:
+Aplicação web do tipo monolítica criada com orientação à objeto e baseada no modelo MVC
+
+## Tecnologias ultilizadas:
+
 - PHP ^7.4 para o backend
 - HTML, CSS e Javascript para o frontend
 - MySQL/MariaDB para o banco de dados
@@ -18,17 +21,17 @@ Certifique-se que seu computador tem os softwares instalados:
 - MySQL ou MariaDB
 - Editor de texto (por exemplo VS code)
 - Navegador Web
-- Composer (Gerenciar de pacotes do PHP)
+- Composer (Gerenciador de pacotes do PHP)
 
 #### Clone o projeto
 Baixe ou faça o clone do repositorio:
-`git clone ...`
+`git clone https://github.com/carloeira/crud-php`
 
 Após isso, entre no diretorio que foi gerado:
-`cd crud-php-oo`
+`cd crud-php`
 
 #### Habilitar as extensões do PHP
-Abra o diretório de instalação do PHP, encontre i arquivo *php.ini-production*, renomeie-o oara *php.ini* e abra-o com algum editor de texto.
+Abra o diretório de instalação do PHP, encontre o arquivo *php.ini-production*, renomeie-o oara *php.ini* e abra-o com algum editor de texto.
 
 Encontre as seguintes linhas e descomente-as, removendo o `;` que precede a linha.
 
@@ -37,17 +40,17 @@ Encontre as seguintes linhas e descomente-as, removendo o `;` que precede a linh
 - mb_string
 - openssl
 
-#### Instalar as dependencias
+#### Instalar as dependências
 Dentro do diretório da aplicação execute no terminal:
 `composer install`
 
-Certifique-se que um diretório chamdo **/vendo** foi criado.
+Certifique-se que um diretório chamdo **/vendor** foi criado.
 
 ### Banco de dados
 
 > O banco de dados é do tipo relacional e contém as tabelas com até 2 níveis de normatização.
 
-#### Criando o cando de dados
+#### Criando o bando de dados
 Entre no seu cliente de banco de dados, e execute o comando:
 
 ```sql
@@ -63,7 +66,7 @@ Certifique-se que as tabelas foram criadas, executando o comando:
 SHOW TABLES;
 ```
 
-Se o resultado for a lista de tabelas existentes, está ok para ultilizar.
+Se o resultado for a lista de tabelas existentes, estará pronto para ultilizar.
 
 #### Configure as credenciais de acesso
 Encontre o arquivo **/config/databse.php** e edite-o conforme as credenciais do seu usuario de banco de dados.
