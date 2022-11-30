@@ -22,9 +22,7 @@ class AlunoController extends AbstractController
     public function listar(): void
     {
         $this->checkLogin();
-
         $alunos = $this->repository->buscarTodos();
-
         $this->render('aluno/listar', [
             'alunos' => $alunos,
         ]);
@@ -32,6 +30,7 @@ class AlunoController extends AbstractController
 
     public function cadastrar(): void
     {
+        $this->checkLogin();
         if (true === empty($_POST)) {
             $this->render('aluno/cadastrar');
             return;
@@ -101,6 +100,7 @@ class AlunoController extends AbstractController
 
     public function excluir(): void
     {
+
         $id = $_GET['id'];
 
         $this->repository->excluir($id);
@@ -112,7 +112,6 @@ class AlunoController extends AbstractController
     public function relatorio(): void
     {
         $hoje = date('d/m/Y');
-
         $alunos = $this->repository->buscarTodos();
 
         $design = "

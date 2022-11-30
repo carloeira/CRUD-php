@@ -12,6 +12,7 @@ class UsuarioApiController
     public function getAll(): void
     {
         $rep = new UserRepository();
-        echo json_encode($$rep->findAll());
+        $usuarios = $rep->findAll();
+        echo json_encode($usuarios);
     }
 }

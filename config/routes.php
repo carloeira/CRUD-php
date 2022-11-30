@@ -1,13 +1,14 @@
 <?php
 
 use App\Controller\AlunoController;
-use App\Controller\Api\AlunoApiController;
-use App\Controller\Api\UsuarioApiController;
 use App\Controller\AuthController;
 use App\Controller\CursoController;
 use App\Controller\ProfessorController;
 use App\Controller\SiteController;
 use App\Controller\UserController;
+use App\Controller\Api\AlunoApiController;
+use App\Controller\Api\ProfessorApiController;
+use App\Controller\Api\UsuarioApiController;
 
 function criarRota(string $controllerNome, string $methodNome): array
 {
@@ -44,8 +45,8 @@ $rotas = [
 
     /* ------ Rotas da API ------- */
     '/api/alunos' => criarRota(AlunoApiController::class, 'getAll'),
-    '/api/professores' => criarRota(ProfessorController::class, 'getAll'),
-    '/api/cursos' => criarRota(CursoController::class, 'getAll'),
+    '/api/professores' => criarRota(ProfessorApiController::class, 'getAll'),
+    '/api/cursos' => criarRota(CursoApiController::class, 'getAll'),
     '/api/usuarios' => criarRota(UsuarioApiController::class, 'getAll'),
     /* --------------------------- */
 ];
