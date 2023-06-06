@@ -100,9 +100,7 @@ class AlunoController extends AbstractController
 
     public function excluir(): void
     {
-
         $id = $_GET['id'];
-
         $this->repository->excluir($id);
         WebNotification::add('Aluno excluido com sucesso', 'success');
         $this->redirect('/alunos/listar');

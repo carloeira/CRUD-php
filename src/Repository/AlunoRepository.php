@@ -25,7 +25,7 @@ class AlunoRepository implements RepositoryInterface
 
         //preparando para executar no banco
         $query = $this->pdo->query($sql);
-
+        
         //executando o comando lá no banco de dados
         $query->execute(); 
 
@@ -36,6 +36,7 @@ class AlunoRepository implements RepositoryInterface
     {
         $sql = "SELECT * FROM ".self::TABLE." WHERE id = '{$id}'";
         $query = $this->pdo->query($sql);
+        var_dump($query);
         $query->execute();
         return $query->fetchObject(Aluno::class); 
     }
@@ -56,7 +57,7 @@ class AlunoRepository implements RepositoryInterface
                 '{$dados->genero}'
             );";
 
-        $this->pdo->query($sql);
+        $this->pdo->query($sql); // Essa conexão com esses dados
 
         return $dados;
     } 
